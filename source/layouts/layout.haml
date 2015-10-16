@@ -1,0 +1,28 @@
+!!!5
+%html{lang:'', 'ng-app':'baiduWeatherWidget', 'ng-controller':'MainCtrl'}
+  %head
+    %meta{charset: 'utf-8'}/
+    %meta{content: 'ie=edge', 'http-equiv':'x-ua-compatible'}/
+    %title
+      =@title
+    %meta{content: '', name: 'description'}/
+    %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}/
+
+    =stylesheet_link_tag  'application'
+
+    %link{rel:'icon', href:'favicon.ico', type:'image/x-icon'}/
+
+  %body{class: @page_classes}
+
+    = partial 'partials/header'
+
+    = yield
+
+    = partial 'partials/footer'
+
+
+
+
+
+
+

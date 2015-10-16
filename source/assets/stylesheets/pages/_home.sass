@@ -1,0 +1,96 @@
+//------------------------------------
+    #home
+//------------------------------------
+
+
+.weather-layout
+    position: relative
+
+.weather-widget
+    float: left
+    width: 100%
+    height: 100%
+    +box-shadow (0 0 8px rgba(0,0,0,0.18),0 8px 16px rgba(0,0,0,0.36))
+
+.title-weather
+    font-size: $font-size-h5
+
+.title-wind
+    font-size: $font-size-h5
+
+.weather-loading
+    padding: 15px 0
+
+.weather-widget-main
+    padding-top: 60px
+    padding-bottom: 10px
+    background-color: #4db6ac
+    color: #fff
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15)
+    text-align: center
+    & > i.icn-weather
+        font-size: 110px
+    & > .title-deg
+        font-size: $font-size-h2
+
+.weather-widget-side
+    padding-top: 40px
+    background-color: #009688
+    color: #fff
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15)
+    text-align: center
+    & > i.icn-weather
+        font-size: 80px
+    & > .title-deg
+        font-size: $font-size-h5
+    &:not(:last-child)
+        border-right: 1px solid #04776D
+
+.weather-info
+    color: #fff
+
++font-face("weather", font-files("artill_clean_icons-webfont.eot", "artill_clean_icons-webfont.woff", "artill_clean_icons-webfont.ttf", "artill_clean_icons-webfont.svg" ))
+
+i.icn-weather
+    font-family: 'weather'
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15)
+    font-style: normal
+    line-height: 0
+    -webkit-font-smoothing: antialiased
+    &[data-weather-icn='中雨转阵雨']
+        &::before
+            content: "p"
+    &[data-weather-icn='阵雨转多云']
+        &::before
+            content: "s"
+    &[data-weather-icn='小雨转阴']
+        &::before
+            content: "W"
+    &[data-weather-icn='多云转晴']
+        &::before
+            content: "A"
+    &[data-weather-icn='多云']
+        &::before
+            content: "A"
+    &[data-weather-icn='晴']
+        &::before
+            content: "1"
+    &[data-weather-icn='霾转阴']
+        &::before
+            content: "∞"
+    &[data-weather-icn='霾转多云']
+        &::before
+            content: "∞"
+    &[data-weather-icn='阵雨']
+        &::before
+            content: "M"
+    &[data-weather-icn='小雨转多云']
+        &::before
+            content: "M"
+    &[data-weather-icn='阴转多云']
+        &::before
+            content: "M"
+    &[data-weather-icn='阵雨转阴']
+        &::before
+            content: "M"
+

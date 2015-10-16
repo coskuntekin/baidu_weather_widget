@@ -1,0 +1,75 @@
+-@title= 'Home page | Baidu Weather Widget'
+-@page_classes= 'home'
+
+.container
+  .row
+    .col-lg-12
+      .page-header.text-center
+        %h1
+          %strong
+            Baidu Weather Widget
+    .col-lg-4.col-lg-push-4
+      .weather-layout
+        .weather-settings.hidden{'ng-controller':'WeatherSettingsCtrl'}
+          .panel.panel-primary
+            .panel-heading
+              %h3.panel-title
+                %i.fa.fa-sun-o
+                Weather Config
+            .panel-body
+              %form
+                .form-group
+                  %label
+                    City:
+                    %strong{'ng-show':'localStorageCityValue', 'ng-bind':'localStorageCityValue'}
+                  %input.form-control{'ng-model':'localStorageCity', placeholder: 'Start typing...', type: 'text'}/
+        .weather-widget{'ng-controller':'BaiduWeatherCtrl'}
+          .weather-widget-main.col-lg-12
+            .weather-loading{'ng-show':'loading'}
+              %i.fa.fa-spinner.fa-pulse.fa-3x
+            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[0].weather}}'}
+            %p.title-deg{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[0].temperature}}
+            %p.title-weather{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[0].weather}}
+            %p.title-wind{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[0].wind}}
+            %p{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[0].date}}
+            %h4{'ng-repeat':'item in weathers'}
+              {{item.results[0].currentCity}}
+          .weather-widget-side.col-lg-4
+            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[1].weather}}'}
+            %p.title-deg{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[1].temperature}}
+            %p.title-weather{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[1].weather}}
+            %p.title-wind{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[1].wind}}
+            %p{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[1].date}}
+          .weather-widget-side.col-lg-4
+            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[2].weather}}'}
+            %p.title-deg{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[2].temperature}}
+            %p.title-weather{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[2].weather}}
+            %p.title-wind{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[2].wind}}
+            %p{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[2].date}}
+          .weather-widget-side.col-lg-4
+            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[3].weather}}'}
+            %p.title-deg{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[3].temperature}}
+            %p.title-weather{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[3].weather}}
+            %p.title-wind{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[3].wind}}
+            %p{'ng-repeat':'item in weathers'}
+              {{item.results[0].weather_data[3].date}}
+      .weather-info
+        =link_to 'javascript:void(0)', class:'btn pull-right', 'ng-click':'updateWeather()' do
+          %span.fa-stack
+            %i.fa.fa-circle.fa-stack-2x
+            %i.fa.fa-info.fa-stack-1x.weather-info
