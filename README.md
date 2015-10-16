@@ -1,23 +1,24 @@
-### Middleman Start kit Template
-Middleman starter kit template created for middleman front-end development.
-If you wonder about middleman please [check out here](https://middlemanapp.com/)
+### Baidu Weather Widget
+It's simple weather widget. If you wanna use please get your API Key.
+Link is [here](http://lbsyun.baidu.com/apiconsole/key)
 
 ### What's Include
-Middleman start kit template basically build on HTML5 Boilerplate front-end
-template. Ready to use Rails assets file structure, Sass file structure, HAML,
-Coffee Script, Sass, Susy, Compass.
+It's build on [middleman](https://middlemanapp.com/). But if you want only HTML version you can find in `gh-pages` branch. 
 
-##### Thirty Part Includes
-- jQuery
-- Modernizr
-- Normalize
-- Twitter Bootstrap
-- Font Awesome
-- Middleman Sitemap
-- Middleman Smusher
+- AngularJS
+    - Angular Animate
+    - Angular Cookies
+    - Angular Local Storage
+    - Angular Sanitize
+    - Angular Touch 
+
+- HAML
+- Sass
+- Bootstrap
+- [Weather Icons](http://www.artill.de/weather-icon-font/)
 
 ### Quick start
-Clone the git repo `git clone https://github.com/coskuntekin/middleman-starter-kit.git`
+Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widget`
 
 ### License
 The code is available under the
