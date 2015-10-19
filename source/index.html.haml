@@ -1,4 +1,4 @@
--@title= 'Home page | Baidu Weather Widget'
+-@title= 'Baidu Weather Widget'
 -@page_classes= 'home'
 
 .container
@@ -8,21 +8,8 @@
         %h1
           %strong
             Baidu Weather Widget
-    .col-lg-4.col-lg-push-4
+    .col-lg-4.col-sm-12.col-xs-12.col-lg-push-4
       .weather-layout
-        .weather-settings.hidden{'ng-controller':'WeatherSettingsCtrl'}
-          .panel.panel-primary
-            .panel-heading
-              %h3.panel-title
-                %i.fa.fa-sun-o
-                Weather Config
-            .panel-body
-              %form
-                .form-group
-                  %label
-                    City:
-                    %strong{'ng-show':'localStorageCityValue', 'ng-bind':'localStorageCityValue'}
-                  %input.form-control{'ng-model':'localStorageCity', placeholder: 'Start typing...', type: 'text'}/
         .weather-widget{'ng-controller':'BaiduWeatherCtrl'}
           .weather-widget-main.col-lg-12
             .weather-loading{'ng-show':'loading'}
@@ -68,8 +55,19 @@
               {{item.results[0].weather_data[3].wind}}
             %p{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[3].date}}
-      .weather-info
-        =link_to 'javascript:void(0)', class:'btn pull-right', 'ng-click':'updateWeather()' do
-          %span.fa-stack
-            %i.fa.fa-circle.fa-stack-2x
-            %i.fa.fa-info.fa-stack-1x.weather-info
+    .col-lg-4.col-sm-12.col-xs-12.col-lg-push-4
+      .weather-settings{'ng-controller':'WeatherSettingsCtrl'}
+        .panel.panel-primary
+          .panel-heading
+            %h3.panel-title
+              %i.fa.fa-sun-o
+              Weather Config
+          .panel-body
+            %form
+              .form-group
+                %label
+                  City:
+                  %strong{'ng-show':'localStorageCityValue', 'ng-bind':'localStorageCityValue'}
+                %input.form-control{'ng-model':'localStorageCity', placeholder: 'Start typing...', type: 'text'}/
+              =link_to 'javascript:void(0)', class:'btn btn-primary', 'ng-click':'updateWeather()' do
+                Done

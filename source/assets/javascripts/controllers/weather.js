@@ -30,7 +30,6 @@ angular.module('baiduWeatherWidget')
 			}).finally(function() {
 				$scope.loading = false;
 			});
-			console.log('updated');
 		};
 		$scope.updateWeather();
 	}]);
