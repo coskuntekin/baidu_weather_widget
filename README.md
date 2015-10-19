@@ -17,13 +17,13 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 - [Weather Icons](http://www.artill.de/weather-icon-font/)
 
 ### To Do List
-* [] Make directive
-* [] Use `factory`
-* [] Update it as same time with done button
-* [] Add animate to show settings layout
-* [] Remove it, unnecessary components (Sass, AngularJS)
-* [] Review it responsive layouts
-* [] Create `gh-pages` branch with demo preview 
+* [ ] Make directive
+* [ ] Use `factory`
+* [ ] Update it as same time with done button
+* [ ] Add animate to show settings layout
+* [ ] Remove it, unnecessary components (Sass, AngularJS)
+* [ ] Review it responsive layouts
+* [ ] Create `gh-pages` branch with demo preview 
 
 ### Quick start
 Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widget.git`
