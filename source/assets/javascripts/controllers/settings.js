@@ -5,9 +5,9 @@
  * @name weatherWidget.controller:WeatherSettingsCtrl
  * @description
  * # WeatherSettingsCtrl
- * Controller of the baiduWeatherWidget
+ * Controller of the baiduWeatherWidgetApp
  */
-angular.module('baiduWeatherWidget')
+angular.module('baiduWeatherWidgetApp')
     .controller('WeatherSettingsCtrl', function($scope, localStorageService) {
         $scope.localStorageCity = localStorageService.get('localStorageCity');
         $scope.$watch('localStorageCity', function(value){

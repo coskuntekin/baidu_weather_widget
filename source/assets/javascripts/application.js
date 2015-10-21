@@ -9,8 +9,7 @@
  * Main module of the application.
  */
 
-angular
-	.module('baiduWeatherWidget', [
+angular.module('baiduWeatherWidgetApp', [
 		'ngAnimate',
 		'ngCookies',
 		'ngSanitize',

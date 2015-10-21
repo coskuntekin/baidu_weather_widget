@@ -5,9 +5,10 @@
  * @name weatherWidget.controller:BaiduWeatherCtrl
  * @description
  * # BaiduWeatherCtrl
- * Controller of the baiduWeatherWidget
+ * Controller of the baiduWeatherWidgetApp
  */
-angular.module('baiduWeatherWidget')
+angular.module('baiduWeatherWidgetApp')
+
 	.controller('BaiduWeatherCtrl', ['$scope', '$http', 'localStorageService', function($scope, $http, localStorageService) {
 		var city;
 		$scope.loading = true;
@@ -26,10 +27,11 @@ angular.module('baiduWeatherWidget')
 			}).then(function(data) {
 				$scope.weathers =  data;
 			}, function(error) {
-				console.warn('JSON Fail '+ error)
+				console.warn('JSON Fail or '+ error)
 			}).finally(function() {
 				$scope.loading = false;
 			});
+			$('.js-weather-settings').addClass('hidden');
 		};
 		$scope.updateWeather();
 	}]);
