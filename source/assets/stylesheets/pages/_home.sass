@@ -13,10 +13,10 @@
     +box-shadow (0 0 8px rgba(0,0,0,0.18),0 8px 16px rgba(0,0,0,0.36))
 
 .title-weather
-    font-size: $font-size-h5
+    font-size: 18px
 
 .title-wind
-    font-size: $font-size-h5
+    font-size: 16px
 
 .weather-loading
     padding: 15px 0
@@ -31,7 +31,7 @@
     & > i.icn-weather
         font-size: 110px
     & > .title-deg
-        font-size: $font-size-h2
+        font-size: 24px
 
 .weather-widget-side
     padding-top: 40px
@@ -42,7 +42,7 @@
     & > i.icn-weather
         font-size: 80px
     & > .title-deg
-        font-size: $font-size-h5
+        font-size: 18px
     &:not(:last-child)
         border-right: 1px solid #04776D
 
@@ -54,5 +54,15 @@
     width: 100%
     height: 100%
 
-.text-white
+.btn-circle
+    display: block
+    width: 20px
+    height: 20px
+    background-color: #04776D
+    +border-radius(50%)
     color: #fff
+
+.icn-info
+    font-style: normal
+    &::before
+        content: '☀'

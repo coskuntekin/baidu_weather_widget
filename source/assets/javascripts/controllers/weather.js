@@ -8,7 +8,6 @@
  * Controller of the baiduWeatherWidgetApp
  */
 angular.module('baiduWeatherWidgetApp')
-
 	.controller('BaiduWeatherCtrl', ['$scope', '$http', 'localStorageService', function($scope, $http, localStorageService) {
 		var city;
 		$scope.loading = true;

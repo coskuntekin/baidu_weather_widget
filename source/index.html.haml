@@ -64,6 +64,5 @@
             %p{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[3].date}}
         =link_to 'javascript:void(0)', class:'btn pull-right', 'ng-attr-city-settings':'' do
-          %span.fa-stack.fa-lg
-            %i.fa.fa-circle.fa-stack-2x
-            %i.fa.fa-info.fa-stack-1x.text-white
+          %span.btn-circle
+            %i.icn-info
