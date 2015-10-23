@@ -25,7 +25,7 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 * [x] ~~Update it as same time with done button~~
 * [ ] Add animate to show settings input
 * [ ] Remove, unnecessary components (Sass, AngularJS)
-* [ ] Review, responsive layouts
+* [x] ~~Review, responsive layouts~~
 * [x] ~~Create `gh-pages` branch with demo preview~~ 
 
 ### Quick start
