@@ -3,12 +3,12 @@
 
 .container
   .row
-    .col-lg-12
+    .col-lg-12.col-xs-12
       .page-header.text-center
         %h1
           %strong
             Baidu Weather Widget
-    .col-lg-4.col-sm-12.col-xs-12.col-lg-push-4
+    .col-lg-4.col-sm-12.col-xs-12.col-lg-push-4.col-xs-push-0
       .weather-layout.js-weather-layout.weather-flip
         .weather-widget{'ng-controller':'BaiduWeatherCtrl'}
           .weather-widget-main.col-lg-12
@@ -33,7 +33,7 @@
                 %input.form-control{'ng-model':'localStorageCity', placeholder: 'Start typing...', type: 'text'}/
               =link_to 'javascript:void(0)', class:'btn btn-default', 'ng-click':'updateWeather()' do
                 Done
-          .weather-widget-side.col-lg-4
+          .weather-widget-side.col-lg-4.col-xs-12
             %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[1].weather}}'}
             %p.title-deg{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[1].temperature}}
@@ -43,7 +43,7 @@
               {{item.results[0].weather_data[1].wind}}
             %p{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[1].date}}
-          .weather-widget-side.col-lg-4
+          .weather-widget-side.col-lg-4.col-xs-12
             %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[2].weather}}'}
             %p.title-deg{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[2].temperature}}
@@ -53,7 +53,7 @@
               {{item.results[0].weather_data[2].wind}}
             %p{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[2].date}}
-          .weather-widget-side.col-lg-4
+          .weather-widget-side.col-lg-4.col-xs-12
             %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[3].weather}}'}
             %p.title-deg{'ng-repeat':'item in weathers'}
               {{item.results[0].weather_data[3].temperature}}
