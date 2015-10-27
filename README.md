@@ -29,6 +29,3 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 ### Quick start
 Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widget.git`
 
-### License
-The code is available under the
-[MIT license](https://github.com/coskuntekin/middleman_starter_kit/blob/master/LICENSE).
