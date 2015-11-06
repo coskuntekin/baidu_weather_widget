@@ -2,26 +2,31 @@
     #weather_font
 //------------------------------------
 
-+font-face("weather", font-files("artill_clean_icons-webfont.eot", "artill_clean_icons-webfont.woff", "artill_clean_icons-webfont.ttf", "artill_clean_icons-webfont.svg" ))
++font-face(weather, font-files("artill_clean_icons-webfont.eot", "artill_clean_icons-webfont.woff", "artill_clean_icons-webfont.ttf", "artill_clean_icons-webfont.svg" ))
 
 i.icn-weather
-  font-family: 'weather'
+  font-family: weather, sans-serif
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15)
   font-style: normal
   line-height: 1
   -webkit-font-smoothing: antialiased
   &[data-weather-icn='霾转多云'],
-  &[data-weather-icn='霾转阴']
+  &[data-weather-icn='霾转阴'],
+  &[data-weather-icn='霾转晴'],
+  &[data-weather-icn='霾']
     &::before
       content: "∞"
   &[data-weather-icn='晴'],
-  &[data-weather-icn='晴转多云']
+  &[data-weather-icn='晴转多云'],
+  &[data-weather-icn='晴转阴']
     &::before
       content: "1"
   &[data-weather-icn='阴'],
   &[data-weather-icn='阴转晴'],
   &[data-weather-icn='阴转阵雨'],
-  &[data-weather-icn='阴转小雨']
+  &[data-weather-icn='阴转小雨'],
+  &[data-weather-icn='阴转雨夹雪'],
+  &[data-weather-icn='阴转多云']
     &::before
       content: "3"
   &[data-weather-icn='多云'],
@@ -29,25 +34,41 @@ i.icn-weather
   &[data-weather-icn='多云转阴'],
   &[data-weather-icn='多云转阵雨'],
   &[data-weather-icn='多云转小雨'],
-  &[data-weather-icn='多云转中雨']
+  &[data-weather-icn='多云转中雨'],
+  &[data-weather-icn='多云转雨夹雪'],
+  &[data-weather-icn='多云转小雪']
     &::before
       content: "A"
   &[data-weather-icn='阵雨'],
   &[data-weather-icn='小雨转阴'],
-  &[data-weather-icn='小雨']
+  &[data-weather-icn='小雨转中雨'],
+  &[data-weather-icn='霾转小雨'],
+  &[data-weather-icn='小雨'],
+  &[data-weather-icn='小雨转多云'],
+  &[data-weather-icn='阵雨转小雨'],
+  &[data-weather-icn='小雨转晴'],
+  &[data-weather-icn='阵雨转多云'],
+  &[data-weather-icn='小雨转小雪'],
+  &[data-weather-icn='阵雨转小雪']
     &::before
       content: "G"
-  &[data-weather-icn='阴转多云'],
   &[data-weather-icn='阵雨转阴'],
-  &[data-weather-icn='小雨转多云'],
-  &[data-weather-icn='阵雨转中雨'],
-  &[data-weather-icn='阵雨转晴']
+  &[data-weather-icn='阵雨转晴'],
+  &[data-weather-icn='中雨转阴'],
+  &[data-weather-icn='中雨'],
+  &[data-weather-icn='中雨转小雨'],
+  &[data-weather-icn='大雨']
     &::before
       content: "M"
-  &[data-weather-icn='阵雨转多云']
-    &::before
-      content: "s"
   &[data-weather-icn='中雨转阵雨']
     &::before
       content: "p"
-
+  &[data-weather-icn='小雨转雨夹雪'],
+  &[data-weather-icn='雨夹雪转小雨'],
+  &[data-weather-icn='雨夹雪转晴'],
+  &[data-weather-icn='雨夹雪'],
+  &[data-weather-icn='小雪'],
+  &[data-weather-icn='雨夹雪转多云'],
+  &[data-weather-icn='小雪转雨夹雪']
+    &::before
+      content: "I"
