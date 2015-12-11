@@ -65,6 +65,9 @@ configure :build do
   # GZIP text files
   # activate :gzip
 
+  # Use relative URLs
+  activate :relative_assets
+
   activate :deploy do |deploy|
     deploy.deploy_method = :git
     # Optional Settings

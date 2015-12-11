@@ -86,7 +86,7 @@ GEM
       sass (>= 3.3.4)
       tilt (~> 1.4.1)
       uglifier (~> 2.6)
-    middleman-deploy (1.0.0)
+    middleman-deploy (2.0.0.pre.alpha)
       middleman-core (>= 3.2)
       net-sftp
       ptools
@@ -145,7 +145,7 @@ PLATFORMS
 DEPENDENCIES
   compass (= 1.0.3)
   middleman (~> 4.0.0.beta.2)
-  middleman-deploy (~> 1.0.0)
+  middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload (~> 3.4.2)
   middleman-sprockets (~> 4.0.0.beta.1)
   sass (~> 3.4.20)
