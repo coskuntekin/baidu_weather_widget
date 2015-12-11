@@ -13,7 +13,8 @@ i.icn-weather
   &[data-weather-icn='霾转多云'],
   &[data-weather-icn='霾转阴'],
   &[data-weather-icn='霾转晴'],
-  &[data-weather-icn='霾']
+  &[data-weather-icn='霾'],
+  &[data-weather-icn='霾转雾']
     &::before
       content: "∞"
   &[data-weather-icn='晴'],
@@ -26,7 +27,8 @@ i.icn-weather
   &[data-weather-icn='阴转阵雨'],
   &[data-weather-icn='阴转小雨'],
   &[data-weather-icn='阴转雨夹雪'],
-  &[data-weather-icn='阴转多云']
+  &[data-weather-icn='阴转多云'],
+  &[data-weather-icn='阴转小雪']
     &::before
       content: "3"
   &[data-weather-icn='多云'],
@@ -65,7 +67,9 @@ i.icn-weather
     &::before
       content: "p"
   &[data-weather-icn='小雨转雨夹雪'],
-  &[data-weather-icn='雨夹雪转小雪'],
+  &[data-weather-icn='雨夹雪转小雨']
+    &::before
+      content: "I"
   &[data-weather-icn='雨夹雪转小雨'],
   &[data-weather-icn='雨夹雪转晴'],
   &[data-weather-icn='雨夹雪'],
@@ -74,3 +78,6 @@ i.icn-weather
   &[data-weather-icn='小雪转雨夹雪']
     &::before
       content: "I"
+  &[data-weather-icn='雷阵雨转阵雨']
+    &::before
+      content: "Y"
