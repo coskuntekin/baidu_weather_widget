@@ -14,23 +14,23 @@ gem 'middleman-livereload', '~> 3.4.2'
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
 
-# Middleman Deploy
-# gem 'middleman-deploy', '~> 1.0.0'
-
 # Sass
-gem 'sass', '~> 3.4.19'
+gem 'sass', '~> 3.4.20'
 
 # Compass
 gem 'compass', '1.0.3'
 
+# Middleman Deploy
+gem 'middleman-deploy', '~> 1.0.0'
+
 # Susy
-#gem 'susy', '2.2.3'
+# gem 'susy', '2.2.3'
 
 # Twitter Bootstrap
-gem 'bootstrap-sass', '~> 3.3.5.1'
+# gem 'bootstrap-sass', '~> 3.3.5.1'
 
 # Font Awesome
-gem 'font-awesome-rails', '~> 4.4.0.0'
+# gem 'font-awesome-rails', '~> 4.4.0.0'
 
 # Middleman Sitemap
 # gem 'middleman-sitemap', '~> 0.0.13'
