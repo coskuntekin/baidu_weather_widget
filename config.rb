@@ -59,6 +59,9 @@ end
 # Build Environment
 configure :build do
 
+  #To activate the middleman-sprockets
+  activate :sprockets
+
   # Minify CSS on build
   # activate :minify_css
 
