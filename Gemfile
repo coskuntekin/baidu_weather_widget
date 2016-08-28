@@ -18,7 +18,7 @@ gem 'middleman-sprockets', '~> 4.0'
 # Middleman Extensions
 ###############################
 # (Middleman Deploy (https://github.com/middleman-contrib/middleman-deploy/pull/87))
-# gem 'middleman-deploy', '~>  2.0.0.pre.alpha'
+gem 'middleman-deploy', '~>  2.0.0.pre.alpha'
 
 # Frameworks/Library
 ###############################
