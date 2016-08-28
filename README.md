@@ -22,6 +22,7 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 - [Weather Icons](http://www.artill.de/weather-icon-font/)
 
 ### To Do List
+* [ ] Remove jQuery
 * [ ] Make directive
 * [x] ~~Use `factory`~~
 * [ ] Add loading effect
