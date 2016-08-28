@@ -1,7 +1,7 @@
 -@title= 'Baidu Weather Widget'
 -@page_classes= 'home'
 
-.container
+.container{'ng-controller':'BaiduWeatherCtrl'}
   .row
     .col-lg-12.col-xs-12
       .page-header.text-center
@@ -9,22 +9,20 @@
           %strong
             Baidu Weather Widget
     .col-lg-4.col-sm-12.col-xs-12.col-lg-push-4.col-xs-push-0
-      .weather-layout.js-weather-layout.weather-flip
-        .weather-widget{'ng-controller':'BaiduWeatherCtrl'}
+      .weather-layout.js-weather-layout.weather-flip{'ng-repeat':'item in weathers'}
+        .weather-widget
           .weather-widget-main.col-lg-12
-            .weather-loading{'ng-show':'loading'}
-              %i.fa.fa-spinner.fa-pulse.fa-3x
-            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[0].weather}}'}
-            %p.title-deg{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[0].temperature}}
-            %p.title-weather{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[0].weather}}
-            %p.title-wind{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[0].wind}}
-            %p{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[0].date}}
-            %h4{'ng-repeat':'item in weathers'}
-              {{item.results[0].currentCity}}
+            %i.icn-weather{'data-weather-icn':'{{item.weather_data[0].weather}}'}
+            %p.title-deg
+              {{item.weather_data[0].temperature}}
+            %p.title-weather
+              {{item.weather_data[0].weather}}
+            %p.title-wind
+              {{item.weather_data[0].wind}}
+            %p
+              {{item.weather_data[0].date}}
+            %h4
+              {{item.currentCity}}
             %form.hidden.js-weather-settings{'name':'localStorageCityForm','ng-controller':'WeatherSettingsCtrl'}
               .form-group
                 %label
@@ -39,35 +37,35 @@
                   %i.fa.fa-exclamation-triangle
                   Required!
           .weather-widget-side.col-lg-4.col-xs-12
-            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[1].weather}}'}
-            %p.title-deg{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[1].temperature}}
-            %p.title-weather{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[1].weather}}
-            %p.title-wind{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[1].wind}}
-            %p{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[1].date}}
+            %i.icn-weather{'data-weather-icn':'{{item.weather_data[1].weather}}'}
+            %p.title-deg
+              {{item.weather_data[1].temperature}}
+            %p.title-weather
+              {{item.weather_data[1].weather}}
+            %p.title-wind
+              {{item.weather_data[1].wind}}
+            %p
+              {{item.weather_data[1].date}}
           .weather-widget-side.col-lg-4.col-xs-12
-            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[2].weather}}'}
-            %p.title-deg{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[2].temperature}}
+            %i.icn-weather{'data-weather-icn':'{{item.weather_data[2].weather}}'}
+            %p.title-deg
+              {{item.weather_data[2].temperature}}
             %p.title-weather{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[2].weather}}
-            %p.title-wind{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[2].wind}}
-            %p{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[2].date}}
+              {{item.weather_data[2].weather}}
+            %p.title-wind
+              {{item.weather_data[2].wind}}
+            %p
+              {{item.weather_data[2].date}}
           .weather-widget-side.col-lg-4.col-xs-12
-            %i.icn-weather{'ng-repeat':'item in weathers', 'data-weather-icn':'{{item.results[0].weather_data[3].weather}}'}
-            %p.title-deg{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[3].temperature}}
-            %p.title-weather{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[3].weather}}
-            %p.title-wind{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[3].wind}}
-            %p{'ng-repeat':'item in weathers'}
-              {{item.results[0].weather_data[3].date}}
+            %i.icn-weather{'data-weather-icn':'{{item.weather_data[3].weather}}'}
+            %p.title-deg
+              {{item.weather_data[3].temperature}}
+            %p.title-weather
+              {{item.weather_data[3].weather}}
+            %p.title-wind
+              {{item.weather_data[3].wind}}
+            %p
+              {{item.weather_data[3].date}}
         =link_to 'javascript:void(0)', class:'btn pull-right', 'ng-attr-city-settings':'' do
           %span.btn-circle
             %i.icn-info
