@@ -4,6 +4,9 @@ It's simple weather widget. Made by AngularJS. If you wanna use please get your 
 ### Demo
 Preview is [here](http://coskuntekin.github.io/baidu_weather_widget/) 
 
+### Quick start
+Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widget.git`
+
 ### What's Include
 It's build on [middleman](https://middlemanapp.com/). But if you want only HTML version you can find in `gh-pages` branch.
 
@@ -20,7 +23,7 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 
 ### To Do List
 * [ ] Make directive
-* [x] Use `factory`
+* [x] ~~Use `factory`~~
 * [ ] Add loading effect
 * [x] ~~Update it as same time with done button~~
 * [ ] Add animate to show settings input
@@ -29,5 +32,3 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 * [x] ~~Create `gh-pages` branch with demo preview~~
 * [x] ~~Add alert if city value is empty or wrong typo~~
 
-### Quick start
-Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widget.git`
