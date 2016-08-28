@@ -1,0 +1,24 @@
+/* TEAM */
+
+    Twitter: @coskuntekin
+    Github: http://github.com/coskuntekin
+
+/* THANKS */
+
+    Ruby
+    Middleman
+    HTML5 Bolireplate
+    HAML
+    Sass
+    Susy
+    Compass
+    Modernizr
+    jQuery
+    GIT
+
+/* SITE */
+
+    Last Update: 2015/09/21
+    Doctype: HTML5
+    IDE: RubyMine
+    Platform: Middleman - Ruby
