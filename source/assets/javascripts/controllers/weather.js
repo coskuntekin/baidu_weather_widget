@@ -8,9 +8,10 @@
  * Controller of the baiduWeatherWidgetApp
  */
 angular.module('baiduWeatherWidgetApp')
-	.controller('BaiduWeatherCtrl', ['$scope', '$http', 'localStorageService', function($scope, $http, localStorageService) {
-		var city;
-		$scope.loading = true;
+	.controller('BaiduWeatherCtrl', ['$scope', '$http', '$log', 'localStorageService', 'weatherService', function($scope, $http, $log, localStorageService, weatherService) {
+
+    var city;
+
 		$scope.updateWeather = function(){
 			if(localStorageService.get('localStorageCity') == null){
 				city = '贵阳';
@@ -18,19 +19,19 @@ angular.module('baiduWeatherWidgetApp')
 				$scope.localStorageDemo = localStorageService.get('localStorageCity');
 				city = localStorageService.get('localStorageCity');
 			}
-			var	apiKey = "hBDoMmfaQvkxwifiKdsQij6s";
-			var url = "http://api.map.baidu.com/telematics/v3/weather?location="+city+"&output=json&ak="+apiKey+"&callback=JSON_CALLBACK&error={error}";
-			$http({
-				url: url,
-				method: 'JSONP'
-			}).then(function(data) {
-				$scope.weathers =  data;
-			}, function(error) {
-				console.warn('JSON Fail or '+ error)
-			}).finally(function() {
-				$scope.loading = false;
-			});
-			$('.js-weather-settings').addClass('hidden');
+      weatherService.getWeather(city)
+        .then(function successCallback(response){
+          var statusCheck = response.status;
+          if(statusCheck == "success"){
+            $scope.weathers =  response.results;
+          }
+        },function fallback(error){
+          $log.warn('JSON Fail with '+ error)
+        }).finally(function(){
+        });
+      $('.js-weather-settings').addClass('hidden');
 		};
+
 		$scope.updateWeather();
+
 	}]);

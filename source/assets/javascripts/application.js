@@ -10,14 +10,12 @@
  */
 
 angular.module('baiduWeatherWidgetApp', [
-		'ngAnimate',
-		'ngCookies',
-		'ngSanitize',
-		'ngTouch',
-		'LocalStorageModule'
-	])
-	.controller('MainCtrl',function($scope){
-
-	});
+  'ngAnimate',
+  'ngCookies',
+  'ngSanitize',
+  'ngTouch',
+  'LocalStorageModule'
+])
+  .controller('MainCtrl', function ($scope) {});
 
 

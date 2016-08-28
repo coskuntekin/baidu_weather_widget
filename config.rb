@@ -35,6 +35,9 @@ end
 # Development Environment
 configure :development do
 
+  #To activate the middleman-sprockets
+  activate :sprockets
+
   # Automatic image dimensions on image_tag helpers
   activate :automatic_image_sizes
 
