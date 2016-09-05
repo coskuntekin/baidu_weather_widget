@@ -2,7 +2,7 @@
 It's simple weather widget. Made by AngularJS. If you wanna use please get your API Key. Link is [here](http://lbsyun.baidu.com/apiconsole/key)
 
 ### Demo
-Preview is [here](http://coskuntekin.github.io/baidu_weather_widget/) 
+Preview is [here](http://coskuntekin.github.io/baidu_weather_widget/)
 
 ### Quick start
 Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widget.git`
@@ -25,11 +25,10 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 * [ ] Remove jQuery
 * [ ] Make directive
 * [x] ~~Use `factory`~~
-* [ ] Add loading effect
+* [x] ~~Add loading effect~~
 * [x] ~~Update it as same time with done button~~
 * [ ] Add animate to show settings input
 * [x] Remove, unnecessary components (Sass, AngularJS)
 * [x] ~~Review, responsive layouts~~
 * [x] ~~Create `gh-pages` branch with demo preview~~
 * [x] ~~Add alert if city value is empty or wrong typo~~
-
