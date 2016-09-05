@@ -498,3 +498,13 @@ i.icn-weather {
   font-style: normal; }
   .icn-info::before {
     content: "☀"; }
+
+.is-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px; }
+
+.text-default {
+  color: #fff; }

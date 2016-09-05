@@ -29,6 +29,8 @@ angular.module('baiduWeatherWidgetApp')
 	.controller('BaiduWeatherCtrl', ['$scope', '$http', '$log', 'localStorageService', 'weatherService', function($scope, $http, $log, localStorageService, weatherService) {
 
     var city;
+		$scope.isWeatherDataLoading = true;
+
 
 		$scope.updateWeather = function(){
 			if(localStorageService.get('localStorageCity') == null){
@@ -41,6 +43,7 @@ angular.module('baiduWeatherWidgetApp')
         .then(function successCallback(response){
           var statusCheck = response.status;
           if(statusCheck == "success"){
+						$scope.isWeatherDataLoading = false;
             $scope.weathers =  response.results;
           }
         },function fallback(error){
@@ -51,6 +54,10 @@ angular.module('baiduWeatherWidgetApp')
 		};
 
 		$scope.updateWeather();
+
+		$scope.hideForm = function() {
+    	$('.js-weather-settings').addClass('hidden');
+		};
 
 	}]);
 //### Import AngularJS Controllers
