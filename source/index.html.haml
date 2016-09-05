@@ -9,7 +9,10 @@
           %strong
             Baidu Weather Widget
     .col-lg-4.col-sm-12.col-xs-12.col-lg-push-4.col-xs-push-0
-      .weather-layout.js-weather-layout.weather-flip{'ng-repeat':'item in weathers'}
+      .weather-widget{'data-ng-show':'isWeatherDataLoading'}
+        .weather-widget-main.is-loading.text-center
+          loading....
+      .weather-layout.js-weather-layout.weather-flip{'data-ng-repeat':'item in weathers'}
         .weather-widget
           .weather-widget-main.col-lg-12
             %i.icn-weather{'data-weather-icn':'{{item.weather_data[0].weather}}'}
@@ -23,14 +26,17 @@
               {{item.weather_data[0].date}}
             %h4
               {{item.currentCity}}
-            %form.hidden.js-weather-settings{'name':'localStorageCityForm','ng-controller':'WeatherSettingsCtrl'}
+            %form.hidden.js-weather-settings{'name':'localStorageCityForm','data-ng-controller':'WeatherSettingsCtrl'}
               .form-group
                 %label
                   City:
                   %strong{'data-ng-show':'localStorageCityValue', 'data-ng-bind':'localStorageCityValue'}
                 %input.form-control{name:'input', 'data-ng-model':'localStorageCity', required:'', 'data-ng-trim':'false', placeholder: 'Type by chinese (贵阳)...', type: 'text'}/
               .form-group
-                =link_to 'javascript:void(0)', 'data-ng-show':'!!!localStorageCityForm.input.$error.required', class:'btn btn-default', 'data-ng-click':'updateWeather()' do
+                =link_to 'javascript:void(0)', 'data-ng-click':'hideForm()', class:'btn btn-link' do
+                  %span.text-default
+                    Back
+                =link_to 'javascript:void(0)', class:'btn btn-default', 'data-ng-click':'updateWeather()' do
                   Done
               .form-group
                 .alert.alert-danger{'data-ng-show':'localStorageCityForm.input.$error.required'}
