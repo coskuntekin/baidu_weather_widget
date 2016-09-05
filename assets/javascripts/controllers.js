@@ -44,7 +44,7 @@ angular.module('baiduWeatherWidgetApp')
           var statusCheck = response.status;
           if(statusCheck == "success"){
 						$scope.isWeatherDataLoading = false;
-            $scope.weathers =  response.results;
+					  $scope.weathers =  response.results;
           }
         },function fallback(error){
           $log.warn('JSON Fail with '+ error)

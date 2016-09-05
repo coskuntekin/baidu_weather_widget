@@ -30,7 +30,7 @@
               loading....
             </div>
           </div>
-          <div class='weather-layout js-weather-layout weather-flip' data-ng-repeat='item in weathers'>
+          <div class='weather-layout js-weather-layout weather-flip' data-ng-repeat='item in weathers' data-ng-show='!isWeatherDataLoading'>
             <div class='weather-widget'>
               <div class='weather-widget-main col-lg-12'>
                 <i class='icn-weather' data-weather-icn='{{item.weather_data[0].weather}}'></i>
