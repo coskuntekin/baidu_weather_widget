@@ -12,7 +12,7 @@
       .weather-widget{'data-ng-show':'isWeatherDataLoading'}
         .weather-widget-main.is-loading.text-center
           loading....
-      .weather-layout.js-weather-layout.weather-flip{'data-ng-repeat':'item in weathers'}
+      .weather-layout.js-weather-layout.weather-flip{'data-ng-show':'!isWeatherDataLoading','data-ng-repeat':'item in weathers'}
         .weather-widget
           .weather-widget-main.col-lg-12
             %i.icn-weather{'data-weather-icn':'{{item.weather_data[0].weather}}'}
