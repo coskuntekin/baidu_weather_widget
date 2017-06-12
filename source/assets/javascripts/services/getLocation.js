@@ -1,17 +1,16 @@
-'use strict';
 
 /**
  * @ngdoc directive
- * @name baiduWeatherWidgetApp.services.weatherService
+ * @name baiduWeatherWidgetApp.services.locationService
  * @description
- * # weatherService
+ * # locationService
  */
 angular.module('baiduWeatherWidgetApp')
-  .factory('weatherService', ['$http',function ($http){
+  .factory('locationService', ['$http',function ($http){
     return {
-       getWeather: function (city) {
-         var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
-         var url = "http://api.map.baidu.com/telematics/v3/weather?location="+city+"&output=json&ak="+apiKey;
+       getLocation: function () {
+        var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
+        var url = "http://api.map.baidu.com/location/ip?ak="+apiKey;
          return $http({
            method: 'JSONP',
            url: url

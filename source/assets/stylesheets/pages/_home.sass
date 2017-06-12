@@ -4,6 +4,9 @@
 
 .weather-layout
   position: relative
+  float: left
+  width: 100%
+  height: 100%
 
 .weather-widget
   float: left
@@ -67,12 +70,13 @@
   &::before
     content: '☀'
 
-.is-loading
-  display: flex
-  align-items: center
-  justify-content: center
-  width: 100%
-  min-height: 300px
-
 .text-default
   color: #fff
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak
+  display: none
