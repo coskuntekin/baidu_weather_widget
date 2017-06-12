@@ -7,7 +7,7 @@
  * # weatherService
  */
 angular.module('baiduWeatherWidgetApp')
-  .factory('weatherService', ['$http',function ($http){
+  .factory('weatherService', ['$http', function ($http){
     return {
        getWeather: function (city) {
          var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';

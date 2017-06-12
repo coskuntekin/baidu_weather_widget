@@ -6,7 +6,7 @@
  * # locationService
  */
 angular.module('baiduWeatherWidgetApp')
-  .factory('locationService', ['$http',function ($http){
+  .factory('locationService', ['$http', function ($http){
     return {
        getLocation: function () {
         var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';

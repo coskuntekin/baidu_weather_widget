@@ -1,5 +1,5 @@
 !!!5
-%html{lang:'zh-CN', 'data-ng-app':'baiduWeatherWidgetApp', 'data-ng-controller':'MainCtrl'}
+%html{lang:'zh-CN', 'data-ng-app':'baiduWeatherWidgetApp', 'data-ng-strict-di':''}
   %head
     %meta{charset: 'utf-8'}
     %meta{content: 'ie=edge', 'http-equiv':'x-ua-compatible'}
@@ -8,8 +8,7 @@
     %meta{content: '', name: 'description'}
     %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}
 
-    =stylesheet_link_tag  'application',
-                          '//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css'
+    =stylesheet_link_tag  'application'
 
     %link{rel:'icon', href:'favicon.ico', type:'image/x-icon'}
 

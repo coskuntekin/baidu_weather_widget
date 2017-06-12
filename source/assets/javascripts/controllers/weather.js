@@ -8,7 +8,11 @@
  * Controller of the baiduWeatherWidgetApp
  */
 angular.module('baiduWeatherWidgetApp')
-  .controller('BaiduWeatherCtrl', ['$scope', 'weatherService', 'locationService', function($scope, weatherService, locationService) {
+  .controller('BaiduWeatherCtrl', [
+    '$scope',
+    'weatherService',
+    'locationService',
+    function($scope, weatherService, locationService) {
 
     var userLocation;
     locationService.getLocation().then(function successCallback(response){

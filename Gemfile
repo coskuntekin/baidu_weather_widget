@@ -23,4 +23,4 @@ gem 'middleman-deploy', '~>  2.0.0.pre.alpha'
 # Frameworks/Library
 ###############################
 # Bootstrap
-#gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.alpha6'
