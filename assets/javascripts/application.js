@@ -1,1 +1,1 @@
-"use strict";angular.module("baiduWeatherWidgetApp",[]).config(function(t){t.resourceUrlWhitelist(["self","http://api.map.baidu.com/**"])}).controller("MainCtrl",function(){});
+"use strict";angular.module("baiduWeatherWidgetApp",[]).config(["$sceDelegateProvider",function(e){e.resourceUrlWhitelist(["self","http://api.map.baidu.com/**"])}]);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app='baiduWeatherWidgetApp' data-ng-controller='MainCtrl' lang='zh-CN'>
+<html data-ng-app='baiduWeatherWidgetApp' data-ng-strict-di='' lang='zh-CN'>
 <head>
 <meta charset='utf-8'>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
@@ -8,7 +8,7 @@ Baidu Weather Widget
 </title>
 <meta content='' name='description'>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
-<link href="assets/stylesheets/application.css" rel="stylesheet" /><link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="assets/stylesheets/application.css" rel="stylesheet" />
 <link href='favicon.ico' rel='icon' type='image/x-icon'>
 </head>
 <body class='home'>
@@ -24,10 +24,13 @@ Baidu Weather Widget
 </h1>
 </div>
 </div>
-<div class='col-lg-4 col-sm-12 col-xs-12 col-lg-push-4 col-xs-push-0' data-ng-cloak=''>
+</div>
+<div class='row'>
+<div class='col-lg-12 col-sm-12 col-xs-12 col-lg-push-4 col-xs-push-0' data-ng-cloak=''>
 <div class='weather-layout js-weather-layout weather-flip' data-ng-repeat='item in weathers'>
 <div class='weather-widget'>
-<div class='weather-widget-main col-lg-12'>
+<div class='row'>
+<div class='col-lg-12 weather-widget-main'>
 <i class='icn-weather' data-weather-icn='{{item.weather_data[0].weather}}'></i>
 <p class='title-deg'>
 {{item.weather_data[0].temperature}}
@@ -45,7 +48,7 @@ Baidu Weather Widget
 {{item.currentCity}}
 </h4>
 </div>
-<div class='weather-widget-side col-lg-4 col-sm-4 col-xs-12'>
+<div class='col-lg-4 col-sm-4 col-xs-12 weather-widget-side'>
 <i class='icn-weather' data-weather-icn='{{item.weather_data[1].weather}}'></i>
 <p class='title-deg'>
 {{item.weather_data[1].temperature}}
@@ -60,7 +63,7 @@ Baidu Weather Widget
 {{item.weather_data[1].date}}
 </p>
 </div>
-<div class='weather-widget-side col-lg-4 col-sm-4 col-xs-12'>
+<div class='col-lg-4 col-sm-4 col-xs-12 weather-widget-side'>
 <i class='icn-weather' data-weather-icn='{{item.weather_data[2].weather}}'></i>
 <p class='title-deg'>
 {{item.weather_data[2].temperature}}
@@ -75,7 +78,7 @@ Baidu Weather Widget
 {{item.weather_data[2].date}}
 </p>
 </div>
-<div class='weather-widget-side col-lg-4 col-sm-4 col-xs-12'>
+<div class='col-lg-4 col-sm-4 col-xs-12 weather-widget-side'>
 <i class='icn-weather' data-weather-icn='{{item.weather_data[3].weather}}'></i>
 <p class='title-deg'>
 {{item.weather_data[3].temperature}}
@@ -95,8 +98,9 @@ Baidu Weather Widget
 </div>
 </div>
 </div>
+</div>
 
-<script src="assets/javascripts/main.js"></script><script src="assets/javascripts/components.js"></script><script src="assets/javascripts/application.js"></script><script src="assets/javascripts/services.js"></script><script src="assets/javascripts/controllers.js"></script><script src="assets/javascripts/directives.js"></script><script src="assets/javascripts/filters.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.6.4/angular.min.js"></script><script src="assets/javascripts/application.js"></script><script src="assets/javascripts/services.js"></script><script src="assets/javascripts/controllers.js"></script>
 
 </body>
 </html>
