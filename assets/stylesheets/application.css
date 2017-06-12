@@ -419,7 +419,7 @@ i.icn-weather {
     content: "A"; }
   i.icn-weather[data-weather-icn='阵雨']::before, i.icn-weather[data-weather-icn='小雨转阴']::before, i.icn-weather[data-weather-icn='小雨转中雨']::before, i.icn-weather[data-weather-icn='霾转小雨']::before, i.icn-weather[data-weather-icn='小雨']::before, i.icn-weather[data-weather-icn='小雨转多云']::before, i.icn-weather[data-weather-icn='阵雨转小雨']::before, i.icn-weather[data-weather-icn='小雨转晴']::before, i.icn-weather[data-weather-icn='阵雨转多云']::before, i.icn-weather[data-weather-icn='小雨转小雪']::before, i.icn-weather[data-weather-icn='阵雨转小雪']::before, i.icn-weather[data-weather-icn='小雨转阵雨']::before {
     content: "G"; }
-  i.icn-weather[data-weather-icn='阵雨转阴']::before, i.icn-weather[data-weather-icn='阵雨转晴']::before, i.icn-weather[data-weather-icn='阵雨转中雨']::before, i.icn-weather[data-weather-icn='中雨转阴']::before, i.icn-weather[data-weather-icn='中雨']::before, i.icn-weather[data-weather-icn='中雨转小雨']::before, i.icn-weather[data-weather-icn='大雨']::before {
+  i.icn-weather[data-weather-icn='阵雨转阴']::before, i.icn-weather[data-weather-icn='阵雨转晴']::before, i.icn-weather[data-weather-icn='阵雨转中雨']::before, i.icn-weather[data-weather-icn='中雨转阴']::before, i.icn-weather[data-weather-icn='中雨']::before, i.icn-weather[data-weather-icn='中雨转小雨']::before, i.icn-weather[data-weather-icn='阵雨转大雨']::before, i.icn-weather[data-weather-icn='大雨']::before {
     content: "M"; }
   i.icn-weather[data-weather-icn='中雨转阵雨']::before {
     content: "p"; }
@@ -431,7 +431,10 @@ i.icn-weather {
     content: "Y"; }
 
 .weather-layout {
-  position: relative; }
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%; }
 
 .weather-widget {
   float: left;
@@ -499,12 +502,13 @@ i.icn-weather {
   .icn-info::before {
     content: "☀"; }
 
-.is-loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 300px; }
-
 .text-default {
   color: #fff; }
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none; }

@@ -1,3 +1,28 @@
+
+/**
+ * @ngdoc directive
+ * @name baiduWeatherWidgetApp.services.locationService
+ * @description
+ * # locationService
+ */
+
+angular.module('baiduWeatherWidgetApp')
+  .factory('locationService', ['$http',function ($http){
+    return {
+       getLocation: function () {
+        var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
+        var url = "http://api.map.baidu.com/location/ip?ak="+apiKey;
+         return $http({
+           method: 'JSONP',
+           url: url
+         }).then(function successCallback(response) {
+           return response.data;
+          }, function errorCallback(response) {
+             return response.data;
+           });
+       }
+     }
+  }]);
 'use strict';
 
 /**
@@ -7,25 +32,21 @@
  * # weatherService
  */
 angular.module('baiduWeatherWidgetApp')
-  .factory('weatherService', ['$http', '$q', function ($http, $q){
-    function getWeather (city) {
-      var deferred = $q.defer();
-      var apiKey= "hBDoMmfaQvkxwifiKdsQij6s";
-      var url = "http://api.map.baidu.com/telematics/v3/weather?location="+city+"&output=json&ak="+apiKey+"&callback=JSON_CALLBACK&error=";
-      $http({
-        url: url,
-        method: 'JSONP'
-      }).success(function(data) {
-        deferred.resolve(data);
-      }).error(function(error){
-        console.warn(error);
-        deferred.reject(error);
-      });
-      return deferred.promise;
-    }
+  .factory('weatherService', ['$http',function ($http){
     return {
-      getWeather: getWeather
-    };
+       getWeather: function (city) {
+         var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
+         var url = "http://api.map.baidu.com/telematics/v3/weather?location="+city+"&output=json&ak="+apiKey;
+         return $http({
+           method: 'JSONP',
+           url: url
+         }).then(function successCallback(response) {
+           return response.data;
+          }, function errorCallback(response) {
+             return response.data;
+           });
+       }
+     }
   }]);
 //### Import AngularJS Services
 
