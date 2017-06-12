@@ -11,24 +11,26 @@ Clone the git repo `git clone https://github.com/coskuntekin/baidu_weather_widge
 It's build on [middleman](https://middlemanapp.com/). But if you want only HTML version you can find in `gh-pages` branch.
 
 - AngularJS
-    - Angular Animate
-    - Angular Cookies
-    - Angular Local Storage
-    - Angular Sanitize
-    - Angular Touch
 - HAML
 - Sass
 - Bootstrap
 - [Weather Icons](http://www.artill.de/weather-icon-font/)
 
+### Changelog
+* Remove unnecessary components
+* Add 'Baidu locatio API' get user location by IP 
+* Add ngCload directive
+
 ### To Do List
-* [ ] Remove jQuery
-* [ ] Make directive
+* [ ] Upgrade to Angular
+* [ ] Do it by Vuejs
+* [x] ~~Remove jQuery~~
+* [x] ~~Make directive~~
 * [x] ~~Use `factory`~~
 * [x] ~~Add loading effect~~
 * [x] ~~Update it as same time with done button~~
-* [ ] Add animate to show settings input
-* [x] Remove, unnecessary components (Sass, AngularJS)
+* [x] ~~Add animate to show settings input~~
+* [x] ~~Remove, unnecessary components (Sass, AngularJS)~~
 * [x] ~~Review, responsive layouts~~
 * [x] ~~Create `gh-pages` branch with demo preview~~
 * [x] ~~Add alert if city value is empty or wrong typo~~
