@@ -8,37 +8,31 @@
  * Controller of the baiduWeatherWidgetApp
  */
 angular.module('baiduWeatherWidgetApp')
-	.controller('BaiduWeatherCtrl', ['$scope', '$http', '$log', 'localStorageService', 'weatherService', function($scope, $http, $log, localStorageService, weatherService) {
+  .controller('BaiduWeatherCtrl', ['$scope', 'weatherService', 'locationService', function($scope, weatherService, locationService) {
 
-    var city;
-		$scope.isWeatherDataLoading = true;
-
-
-		$scope.updateWeather = function(){
-			if(localStorageService.get('localStorageCity') == null){
-				city = '贵阳';
-			}else{
-				$scope.localStorageDemo = localStorageService.get('localStorageCity');
-				city = localStorageService.get('localStorageCity');
-			}
-      weatherService.getWeather(city)
-        .then(function successCallback(response){
+    var userLocation;
+    locationService.getLocation().then(function successCallback(response){
+      if(response.status === 0){
+        userLocation = response.content.address_detail.city
+      }else{
+        console.warn('Can\'t get location');
+      }
+    },function errorCallback(error){
+      console.warn(error);
+    })
+    .then(function successCallback(){
+       weatherService.getWeather(userLocation).then(function successCallback(response){
           var statusCheck = response.status;
-          if(statusCheck == "success"){
-						$scope.isWeatherDataLoading = false;
-					  $scope.weathers =  response.results;
+          if(statusCheck === 'success'){
+					  $scope.weathers = response.results;
+          }else{
+            $scope.warningMessage = statusCheck;
           }
-        },function fallback(error){
-          $log.warn('JSON Fail with '+ error)
-        }).finally(function(){
+        },function errorCallback(error){
+          console.warn(error)
         });
-      $('.js-weather-settings').addClass('hidden');
-		};
-
-		$scope.updateWeather();
-
-		$scope.hideForm = function() {
-    	$('.js-weather-settings').addClass('hidden');
-		};
+    },function errorCallback(error){
+      console.warn(error);
+    });
 
 	}]);
