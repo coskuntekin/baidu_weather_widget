@@ -18,8 +18,8 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 
 ### Changelog
 * Remove unnecessary components
-* Add 'Baidu locatio API' get user location by IP 
-* Add ngCload directive
+* Add 'Baidu location API' get user location by IP 
+* Add ngCloak directive
 
 ### To Do List
 * [ ] Upgrade to Angular
