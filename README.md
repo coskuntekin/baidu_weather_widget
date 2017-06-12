@@ -20,6 +20,8 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 * Remove unnecessary components
 * Add 'Baidu location API' get user location by IP 
 * Add ngCloak directive
+* Add ngStrict mode
+* Add Bootstrap4 
 
 ### To Do List
 * [ ] Upgrade to Angular
