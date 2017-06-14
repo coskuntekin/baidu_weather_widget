@@ -44,8 +44,12 @@ configure :development do
   # Reload the browser automatically whenever files change
   activate :livereload,  :no_swf => true
 
+  # Haml Configuration
+  # Disable Haml warnings
+  Haml::TempleEngine.disable_option_validator!
+  Haml::Options.defaults[:format] = :html5
+
   # Assets Pipeline Sets
-  set :haml, {ugly: false, format: :html5}
   set :css_dir, 'assets/stylesheets'
   set :js_dir, 'assets/javascripts'
   set :images_dir, 'assets/images'
