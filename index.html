@@ -15,7 +15,7 @@ Baidu Weather Widget
 
 <div class='container' data-ng-controller='BaiduWeatherCtrl'>
 <div class='row'>
-<div class='col-lg-12 col-xs-12'>
+<div class='col-12'>
 <div class='page-header text-center'>
 <h1 class='text-muted'>
 <strong>
@@ -25,8 +25,12 @@ Baidu Weather Widget
 </div>
 </div>
 </div>
-<div class='row'>
-<div class='col-lg-12 col-sm-12 col-xs-12 col-lg-push-4 col-xs-push-0' data-ng-cloak=''>
+<div class='row justify-content-center'>
+<div class='col-12' data-ng-cloak=''>
+<div class='alert alert-warning mb-0' data-ng-if='errorMessage'>
+Can't get location. Server message is:
+<em>{{errorMessage}}</em>
+</div>
 <div class='weather-layout js-weather-layout weather-flip' data-ng-repeat='item in weathers'>
 <div class='weather-widget'>
 <div class='row'>
