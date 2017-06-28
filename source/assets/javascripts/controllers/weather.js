@@ -14,12 +14,13 @@ angular.module('baiduWeatherWidgetApp')
     'locationService',
     function($scope, weatherService, locationService) {
 
-    var userLocation;
+    let userLocation;
+    $scope.errorMessage = '';
     locationService.getLocation().then(function successCallback(response){
       if(response.status === 0){
         userLocation = response.content.address_detail.city
       }else{
-        console.warn('Can\'t get location');
+        $scope.errorMessage = response.message;
       }
     },function errorCallback(error){
       console.warn(error);

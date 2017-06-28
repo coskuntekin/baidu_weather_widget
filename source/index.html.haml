@@ -3,13 +3,16 @@
 
 .container{'data-ng-controller':'BaiduWeatherCtrl'}
   .row
-    .col-lg-12.col-xs-12
+    .col-12
       .page-header.text-center
         %h1.text-muted
           %strong
             Baidu Weather Widget
-  .row
-    .col-lg-12.col-sm-12.col-xs-12.col-lg-push-4.col-xs-push-0{'data-ng-cloak':''}
+  .row.justify-content-center
+    .col-12{'data-ng-cloak':''}
+      .alert.alert-warning.mb-0{'data-ng-if':"errorMessage"}
+        Can't get location. Server message is: 
+        %em {{errorMessage}}
       .weather-layout.js-weather-layout.weather-flip{'data-ng-repeat':'item in weathers'}
         .weather-widget
           .row
