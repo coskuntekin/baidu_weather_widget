@@ -17,11 +17,14 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 - [Weather Icons](http://www.artill.de/weather-icon-font/)
 
 ### Changelog
+* Add location error message
+-----
 * Remove unnecessary components
 * Add 'Baidu location API' get user location by IP 
 * Add ngCloak directive
 * Add ngStrict mode
 * Add Bootstrap4 
+
 
 ### To Do List
 * [ ] Upgrade to Angular
