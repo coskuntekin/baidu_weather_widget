@@ -9,8 +9,8 @@ angular.module('baiduWeatherWidgetApp')
   .factory('locationService', ['$http', function ($http){
     return {
        getLocation: function () {
-        var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
-        var url = "http://api.map.baidu.com/location/ip?ak="+apiKey;
+        const apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
+        const url = "http://api.map.baidu.com/location/ip?ak="+apiKey;
          return $http({
            method: 'JSONP',
            url: url

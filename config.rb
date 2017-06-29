@@ -36,7 +36,10 @@ end
 configure :development do
 
   #To activate the middleman-sprockets
-  activate :sprockets
+  require 'sprockets/es6'
+  activate :sprockets do |s|
+    s.supported_output_extensions << '.es6'
+  end
 
   # Automatic image dimensions on image_tag helpers
   activate :automatic_image_sizes
@@ -64,7 +67,10 @@ end
 configure :build do
 
   #To activate the middleman-sprockets
-  activate :sprockets
+  require 'sprockets/es6'
+  activate :sprockets do |s|
+    s.supported_output_extensions << '.es6'
+  end
 
   # Minify CSS on build
   activate :minify_css

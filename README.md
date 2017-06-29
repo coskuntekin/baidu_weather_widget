@@ -17,8 +17,10 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 - [Weather Icons](http://www.artill.de/weather-icon-font/)
 
 ### Changelog
+#### [29/06/2017]
+* Add ES6 support
+#### [28/06/2017]
 * Add location error message
------
 * Remove unnecessary components
 * Add 'Baidu location API' get user location by IP 
 * Add ngCloak directive

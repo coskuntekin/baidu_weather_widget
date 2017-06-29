@@ -10,8 +10,8 @@ angular.module('baiduWeatherWidgetApp')
   .factory('weatherService', ['$http', function ($http){
     return {
        getWeather: function (city) {
-         var apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
-         var url = "http://api.map.baidu.com/telematics/v3/weather?location="+city+"&output=json&ak="+apiKey;
+         const apiKey= 'hBDoMmfaQvkxwifiKdsQij6s';
+         const url = "http://api.map.baidu.com/telematics/v3/weather?location="+city+"&output=json&ak="+apiKey;
          return $http({
            method: 'JSONP',
            url: url

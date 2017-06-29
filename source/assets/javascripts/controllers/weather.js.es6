@@ -27,7 +27,7 @@ angular.module('baiduWeatherWidgetApp')
     })
     .then(function successCallback(){
        weatherService.getWeather(userLocation).then(function successCallback(response){
-          var statusCheck = response.status;
+          const statusCheck = response.status;
           if(statusCheck === 'success'){
 					  $scope.weathers = response.results;
           }else{
