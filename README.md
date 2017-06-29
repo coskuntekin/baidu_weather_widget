@@ -18,6 +18,7 @@ It's build on [middleman](https://middlemanapp.com/). But if you want only HTML 
 
 ### Changelog
 #### [29/06/2017]
+* Fix require
 * Add ES6 support
 #### [28/06/2017]
 * Add location error message
